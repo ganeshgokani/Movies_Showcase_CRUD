@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Movies</title>
+</head>
+<body>
+   
+
+    <nav>
+        <div class="options">
+            
+            <button class="addNewMovie">Add New Movie</button>
+        </div>
+    </nav>
+
+    <div class="loading">
+        <img src="img/loading.gif" alt="">
+    </div>
+
+    <div class="movies">
+     <!-- populating data here -->
+<!--  CARD COMPONENT
+     <div class="card">
+        <div class="image">
+        </div>
+
+        <div class="shadowEffect">
+            Inception
+
+            <div class="options" >
+                <img class="edit" src="img/icons8-edit-48.png" alt="">
+                <img class="delete" src="img/icons8-delete-48.png" alt="">
+            </div>
+        </div>
+        
+        <p>Director : </p>
+            <p>Genre : </p>
+            <p>Year : </p>
+            <p>Duration :</p> 
+           <p>Collections :</p> </p>
+
+     </div>
+    </div> -->
+
+
+   <!-- Delete Confirmation Modal -->
+<div id="deleteMovie" class="movieDelete">
+    <div class="movie-content">
+      
+      <p>Are you sure you want to delete this Movie Details?</p>
+      <button id="confirmDelete" class="btn-confirm">Delete</button>
+      <button id="cancelDelete" class="btn-cancel">Cancel</button>
+    </div>
+  </div>
+
+
+ <!-- Add Movie Modal -->
+ <div id="addMovieModal" class="movieAdd" style="display:none;">
+    <div class="movie-content">
+        <h2>Add New Movie</h2>
+        <form id="addMovieForm">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Enter movie title" required>
+
+            <label for="director">Director</label>
+            <input type="text" id="director" placeholder="Enter director name" required>
+
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" placeholder="Enter genre" required>
+
+            <label for="releaseYear">Release Year</label>
+            <input type="number" id="releaseYear" placeholder="Enter release year" required>
+
+            <label for="durationHours">Duration (Hours)</label>
+            <input type="number" id="durationHours" placeholder="Enter hours" required>
+
+            <label for="durationMinutes">Duration (Minutes)</label>
+            <input type="number" id="durationMinutes" placeholder="Enter minutes" required>
+
+            <label for="durationSeconds">Duration (Seconds)</label>
+            <input type="number" id="durationSeconds" placeholder="Enter seconds">
+
+            <label for="rating">Rating</label>
+            <input type="number" step="0.1" id="rating" placeholder="Enter rating" required>
+
+            <label for="posterUrl">Poster URL</label>
+            <input type="text" id="posterUrl" placeholder="Enter poster image URL" required>
+
+            <label for="boxOfficeCollection">Box Office Collection</label>
+            <input type="number" id="boxOfficeCollection" placeholder="Enter box office collection" required>
+
+            <button type="submit" class="btn-submit">Add Movie</button>
+            <button type="button" id="cancelAddMovie" class="btn-cancel">Cancel</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div id="editMovieModal" class="movieEdit" style="display:none;">
+    <div class="movie-content">
+        <h2>Edit Movie</h2>
+        <form id="editMovieForm">
+            <input type="hidden" id="editMovieId">
+
+            <label for="editTitle">Title</label>
+            <input type="text" id="editTitle" placeholder="Enter movie title" required>
+
+            <label for="editDirector">Director</label>
+            <input type="text" id="editDirector" placeholder="Enter director name" required>
+
+            <label for="editGenre">Genre</label>
+            <input type="text" id="editGenre" placeholder="Enter genre" required>
+
+            <label for="editReleaseYear">Release Year</label>
+            <input type="number" id="editReleaseYear" placeholder="Enter release year" required>
+
+            <label for="editDuration">Duration (hh:mm:ss)</label>
+            <input type="text" id="editDuration" placeholder="Enter duration" required>
+
+            <label for="editRating">Rating</label>
+            <input type="number" step="0.1" id="editRating" placeholder="Enter rating" required>
+
+            <label for="editPosterUrl">Poster URL</label>
+            <input type="text" id="editPosterUrl" placeholder="Enter poster image URL" required>
+
+            <label for="editBoxOfficeCollection">Box Office Collection</label>
+            <input type="number" id="editBoxOfficeCollection" placeholder="Enter box office collection" required>
+
+            <button type="submit" class="btn-submit">Update Movie</button>
+            <button type="button" id="cancelEditMovie" class="btn-cancel">Cancel</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+  
+
+
+</body>
+<script src="script.js"></script>
+</html>
