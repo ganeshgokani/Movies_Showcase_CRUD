@@ -2,16 +2,19 @@ const express = require('express');
 const mysql = require('mysql2');
 const path = require('path');
 const session = require('express-session');
+require('dotenv').config(); // loads .env file
+
 
 const app = express();
 
 // MySQL Database connection
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "Madhavi@123",
-    database: "stores"
-});
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+  });
 
 // Connecting to the database
 connection.connect(err => {
@@ -29,6 +32,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+
 
 // Hardcoded user for authentication
 const validUser = {
