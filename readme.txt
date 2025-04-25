@@ -1,5 +1,7 @@
 # Movie Management Application
 
+https://movies-showcase-crud.onrender.com/
+
 This is a Node.js and Express.js-based web application for managing movies, integrated with a MySQL database. The application allows users to **add**, **edit**, **delete**, and **view** movies. It also provides a simple and user-friendly interface for handling movie details like title, director, genre, release year, duration, rating, poster image URL, and box office collections.
 
 ## Features
